@@ -1,2 +1,1 @@
-tshirt-site
-===========
+This is our group site.
