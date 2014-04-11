@@ -8,6 +8,10 @@
 	<script src="jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="main.js"></script>
   <style>
+  body {
+		font-size: 80%;
+		font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+	}
 	#selectable .ui-selected {border:solid 1px red;}
 	#selectable {margin: 0; padding: 0; height: 300px; position: relative; padding:0;}
 	#selectable > div {position: absolute; margin: 0; padding:10px;  width: 100px;}
@@ -20,11 +24,11 @@
 <body>
 <section id="box1">
 	<form>
-		<p>Text: <input type="text" id="txt"></p>
-		<p>Size: <input type="number" id="FS" min="1"></p>
-		<p>Color: <input type="color" id="color" value = "#000000"></p>
+		<p class="ui-widget">Text: <input type="text" id="txt"></p>
+		<p class="ui-widget">Size: <input type="number" id="FS" min="1"></p>
+		<p class="ui-widget">Color: <input type="color" id="color" value = "#000000"></p>
 	</form>
-	<div>
+	<div class="ui-widget">
 		<label for="tags">Fonts: </label>
 		<input id="tags">
 	</div>
@@ -39,7 +43,7 @@
   <input type="checkbox" id="check5"><label for="check5" title="Edit">E</label>
 </div>
 <form>
-		<p><input type="button" id="button" value="Save"></p>
+		<p><input type="submit" id="button" value="Save"></p>
 </form>
 <div id="container" >
 	 <div id="selectable">

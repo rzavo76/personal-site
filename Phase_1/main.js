@@ -1,11 +1,11 @@
 function main(){
 	var button = document.getElementById("button");
-	auto_complete();
-	font_styles();
+	set_up();
 	select();
 	button.addEventListener("click",display,false);
 }
-function auto_complete() {
+function set_up() {
+	//auto complete
 		var availableTags = [
 			"Arial",
 			"Arial Black",
@@ -31,10 +31,10 @@ function auto_complete() {
 		$( "#tags" ).autocomplete({
 			source: availableTags
 		});
-}
-
-function font_styles(){
-	$( "#format" ).buttonset();
+		//Checkboxes
+		$( "#format" ).buttonset();
+		//Submit button
+		$( "input[type=submit], a, button" ).button().click(function( event ) {event.preventDefault();});
 }
 
 function select(){
@@ -138,11 +138,20 @@ function display(){
 		if(document.getElementById('check1').checked){
 			div.style.fontWeight = "bold";
 		}
+		else{
+			div.style.fontWeight = "normal";
+		}
 		if(document.getElementById('check2').checked){
 			div.style.fontStyle = "italic";
 		}
+		else{
+			div.style.fontStyle = "normal";
+		}
 		if(document.getElementById('check3').checked){
 			div.style.textDecoration = "underline";
+		}
+		else{
+			div.style.textDecoration = "none";
 		}
 	}
 	else{
