@@ -127,7 +127,6 @@ function display(){
 		}
 		//color update 
 		var color = document.getElementById("color").value;
-		document.getElementById("color").value = "#000000";
 		div.style.color = color;
 		//font update
 		var font = document.getElementById("tags").value;
