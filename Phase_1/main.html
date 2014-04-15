@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Phase #1</title>
+	<link href="jquery-ui-1.10.4.custom/css/base/jquery.ui.all.css" rel="stylesheet">
+	<script src="jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+	<script src="jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
+	<script src="main.js"></script>
+  <style>
+  body {
+		font-size: 80%;
+		font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+	}
+	#selectable .ui-selected {border:solid 1px red;}
+	#selectable {margin: 0; padding: 0; height: 300px; position: relative; padding:0;}
+	#selectable > div {position: absolute; margin: 0; padding:10px;  width: 100px;}
+	.ui-selectable-helper {position: absolute; z-index: 100; border:1px dotted black;}
+
+	#container { width: 300px; height: 300px; border:solid 1px #CCC;}
+	
+  </style>
+</head>
+<body>
+<section id="box1">
+	<form>
+		<p class="ui-widget">Text: <input type="text" id="txt"></p>
+		<p class="ui-widget">Size: <input type="number" id="FS" min="1"></p>
+		<p class="ui-widget">Color: <input type="color" id="color" value = "#000000"></p>
+	</form>
+	<div class="ui-widget">
+		<label for="tags">Fonts: </label>
+		<input id="tags">
+	</div>
+</section>
+<br>
+<div id="format">
+  <input type="checkbox" id="check1"><label for="check1" title="Bold">B</label>
+  <input type="checkbox" id="check2"><label for="check2" title="Italic">I</label>
+  <input type="checkbox" id="check3"><label for="check3" title="Underline">U</label>
+  <br><br>
+  <input type="checkbox" id="check4"><label for="check4" title="Delete">D</label>
+  <input type="checkbox" id="check5"><label for="check5" title="Edit">E</label>
+</div>
+<form>
+		<p><input type="submit" id="button" value="Save"></p>
+</form>
+<div id="container" >
+	 <div id="selectable">
+	</div>
+</div>
+ 
+</body>
+</html>
